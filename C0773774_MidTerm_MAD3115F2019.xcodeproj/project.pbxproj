@@ -22,6 +22,7 @@
 		181E76A5236B586300E0373B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181E76A4236B586300E0373B /* Home.storyboard */; };
 		181E76AA236B5BA500E0373B /* CustomerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E76A9236B5BA500E0373B /* CustomerListVC.swift */; };
 		181E76AC236B5E7E00E0373B /* AddCustomerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E76AB236B5E7E00E0373B /* AddCustomerVC.swift */; };
+		183192F9236C887B00C1BD62 /* DataInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 183192F8236C887B00C1BD62 /* DataInfo.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		181E76A4236B586300E0373B /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		181E76A9236B5BA500E0373B /* CustomerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListVC.swift; sourceTree = "<group>"; };
 		181E76AB236B5E7E00E0373B /* AddCustomerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomerVC.swift; sourceTree = "<group>"; };
+		183192F8236C887B00C1BD62 /* DataInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DataInfo.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				181E76A1236B52D100E0373B /* Sources */,
 				181E76A0236B52C700E0373B /* Extensions */,
 				181E7675236B1C9400E0373B /* Info.plist */,
+				183192F8236C887B00C1BD62 /* DataInfo.plist */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				181E7671236B1C9400E0373B /* Assets.xcassets in Resources */,
 				181E766C236B1C8F00E0373B /* Welcome.storyboard in Resources */,
 				181E76A5236B586300E0373B /* Home.storyboard in Resources */,
+				183192F9236C887B00C1BD62 /* DataInfo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +541,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZZGNKKHCD7;
 				INFOPLIST_FILE = /Users/apple/Documents/iOSLambtonDoc/C0773774_MidTerm_MAD3115F2019/C0773774_MidTerm_MAD3115F2019/Other/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -555,6 +560,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZZGNKKHCD7;
 				INFOPLIST_FILE = /Users/apple/Documents/iOSLambtonDoc/C0773774_MidTerm_MAD3115F2019/C0773774_MidTerm_MAD3115F2019/Other/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
