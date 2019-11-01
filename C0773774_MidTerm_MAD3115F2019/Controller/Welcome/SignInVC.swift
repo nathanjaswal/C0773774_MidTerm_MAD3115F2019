@@ -36,10 +36,11 @@ class SignInVC: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        // reset values
-        userN_tf.text = ""
-        passwd_tf.text = ""
-
+        //
+        self.view.endEditing(true)
+        
+        //
+        initSetup()
     }
     
     // MARK: - Action
@@ -60,6 +61,7 @@ class SignInVC: UIViewController {
     }
     
     @IBAction func signInBtnClicked(_ sender: Any) {
+        //
         if remembBtn.isSelected == true {
             UserDefaults.standard.set(userN_tf.text, forKey: "user_name")
             UserDefaults.standard.set(passwd_tf.text, forKey: "password")
@@ -69,13 +71,37 @@ class SignInVC: UIViewController {
              }
         }
         
-        self.navigateScreen(storyboard: "Home", controller: "CustomerListVC")
+        //
+        if self.checkTextFields() {
+            //
+            let boolChk = self.readDataInfoFromPlistFile().0
+            let msg = self.readDataInfoFromPlistFile().1
+            if boolChk {
+                //
+                self.navigateScreen(storyboard: "Home", controller: "CustomerListVC")
+            }else{
+                self.showAlert(title: "Nitin Jaswal", message: msg)
+            }
+            
+        }
         
     }
     
     // MARK: - Helper
-    func checkValidation() -> Bool {
+    
+    func checkTextFields() -> Bool {
         
+        if userN_tf.text == "" {
+            self.showAlert(title: "Nitin Jaswal", message: "Username required.")
+            return false
+        }
+        if passwd_tf.text == "" {
+            self.showAlert(title: "Nitin Jaswal", message: "Password required.")
+            return false
+        }
+        
+        
+        return true
     }
     
     func initSetup(){
@@ -83,6 +109,11 @@ class SignInVC: UIViewController {
         if let userName = UserDefaults.standard.string(forKey: "user_name"), let passwd = UserDefaults.standard.string(forKey: "password") {
             userN_tf.text = userName
             passwd_tf.text = passwd
+        }else{
+            // reset values
+            userN_tf.text = ""
+            passwd_tf.text = ""
+
         }
         
     }
@@ -98,6 +129,44 @@ class SignInVC: UIViewController {
         signInBtn.addShadow(view: signInBtn, color: UIColor.hexStringToUIColor(hex: "6D67FD").cgColor, offset: CGSize(width: 0, height: 3), opacity: 0.8, radius: 5)
         
     }
+    
+    func readDataInfoFromPlistFile() -> (Bool, String)
+       {
+           if let plist = Bundle.main.path(forResource: "DataInfo", ofType: "plist")
+           {
+               if let dict = NSDictionary(contentsOfFile: plist)
+               {
+                   //Reading the users
+                   if let users = dict["appUsers"] as? [[String: String]]
+                   {
+                        //
+                        var strMsg = String()
+                        for user in users
+                        {
+                           
+                            let userName = user["username"]!
+                            let passwd = user["password"]!
+                            
+                            // match entered data
+                            if(userName != userN_tf.text){
+                                strMsg = "Wrong Username"
+                            }else if(userName == userN_tf.text && passwd != passwd_tf.text){
+                                strMsg = "Wrong Password"
+                            }else if(userName == userN_tf.text && passwd == passwd_tf.text) {
+                                strMsg = ""
+                                return (true, "")
+                            }
+                        }
+                    
+                        //
+                        return (false, strMsg)
+                   }
+                  
+               }
+           }
+        
+           return (false, "Invalid information, check again.")
+       }
     
 
 }
