@@ -1,0 +1,79 @@
+{
+    "Employee": [{
+        "id": 1,
+        "name": "Ramanpreet Singh",
+        "age": 25,
+        "schoolName": "Lambton College",
+        "type": "Intern",
+        "vehicle": null
+    
+    },
+    {
+        "id": 2,
+        "name": "Nitin Jaswal",
+        "age": 26,
+        "rate": 30.0,
+        "hoursWorked": 10,
+        "fixedAmount": 40.0,
+        "type": "PartTime / Fixed Amount",
+        "vehicle": {
+            "id": 2,
+            "vehicleType": "car",
+            "manufacturer": "Tata Motors",
+            "plateNo": "PB777",
+            "model": "Jaguar Land Rover",
+            "insuranceDate": "2018-12-03",
+            "mileage": 12.8,
+            "details": {
+                "price": 25650.20,
+                "fuelType": "Diesel",
+                "noOfSeats": 3
+            }
+        }
+    },
+    {
+        "id": 3,
+        "name": "Srinath ",
+        "age": 22,
+        "rate": 30.0,
+        "hoursWorked": 10,
+        "commissionPercentage": 20,
+        "type": "PartTime / Commissioned",
+        "vehicle": {
+            "id": 3,
+            "manufacturer": "Royal Enfield",
+            "plateNo": "MH455",
+            "model": "Classic 350",
+            "insuranceDate": "2016-12-03",
+            "mileage": 21.2,
+            "vehicleType": "motorcycle",
+            "details": {
+                "price": 21000.30,
+                "fuelType": "Petrol",
+                "noOfSeats": 1
+            }
+        }
+    },
+    {
+        "id": 4,
+        "name": "John Bond",
+        "age": 26,
+        "salary": 30.0,
+        "bonus": 10,
+        "type": "FullTime",
+        "vehicle": {
+            "id": 4,
+            "vehicleType": "car",
+            "manufacturer": "Majda",
+            "plateNo": "UP777",
+            "model": "Sports",
+            "insuranceDate": "2019-02-01",
+            "mileage": 12.8,
+            "details": {
+                "price": 25550.20,
+                "fuelType": "Diesel",
+                "noOfSeats": 7
+            }
+        }
+    }]
+}
