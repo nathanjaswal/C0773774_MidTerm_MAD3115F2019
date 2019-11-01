@@ -32,7 +32,7 @@ class CustomerListVC: UIViewController {
     // MARK:- Action
     @IBAction func moreBtnClicked(_ sender: Any) {
         //
-        let alertController = UIAlertController(title: "Nitin Jaswal", message: "Do You want to Sign Out?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "NJ", message: "Do You want to Sign Out?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Yes", style: UIAlertAction.Style.destructive) {
             UIAlertAction in
             

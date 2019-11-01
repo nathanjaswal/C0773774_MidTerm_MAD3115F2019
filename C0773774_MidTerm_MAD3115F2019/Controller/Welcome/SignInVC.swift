@@ -81,7 +81,7 @@ class SignInVC: UIViewController {
                 //
                 self.navigateScreen(storyboard: "Home", controller: "CustomerListVC")
             }else{
-                self.showAlert(title: "Nitin Jaswal", message: msg)
+                self.showAlert(title: "NJ", message: msg)
             }
         }
         
@@ -118,11 +118,11 @@ class SignInVC: UIViewController {
     func checkTextFields() -> Bool {
         
         if userN_tf.text == "" {
-            self.showAlert(title: "Nitin Jaswal", message: "Username required.")
+            self.showAlert(title: "NJ", message: "Username required.")
             return false
         }
         if passwd_tf.text == "" {
-            self.showAlert(title: "Nitin Jaswal", message: "Password required.")
+            self.showAlert(title: "NJ", message: "Password required.")
             return false
         }
         
