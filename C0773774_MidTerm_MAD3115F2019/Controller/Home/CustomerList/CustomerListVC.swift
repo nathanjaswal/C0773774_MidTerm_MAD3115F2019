@@ -2,8 +2,8 @@
 //  CustomerListVC.swift
 //  C0773774_MidTerm_MAD3115F2019
 //
-//  Created by Apple on 31/10/19.
-//  Copyright © 2019 Apple. All rights reserved.
+//  Created by Nitin Jaswal on 31/10/19.
+//  Copyright © 2019 Nitin Jaswal. All rights reserved.
 //
 
 import UIKit
@@ -20,6 +20,9 @@ class CustomerListVC: UIViewController {
 
         //
         setUpUI()
+        
+        //
+        initSetup()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,15 +54,16 @@ class CustomerListVC: UIViewController {
     }
     
     @IBAction func addBtnClicked(_ sender: Any) {
-        
+        //
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "AddCustomerVC")
+        self.present(vc, animated: true, completion: nil)
     }
     
     // MARK: - Helper
     func initSetup(){
         //
-        
+        populateCustomer()
         
     }
     
@@ -72,6 +76,9 @@ class CustomerListVC: UIViewController {
     func populateCustomer() {
         let customers = DataSource.readJsonWith(name: "Customers")
         Singelton.singObj.customerArr = customers
+        
+        //
+        custmList_tv.reloadData()
     }
     
 }

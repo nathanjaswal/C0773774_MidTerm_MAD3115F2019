@@ -2,8 +2,8 @@
 //  Helper.swift
 //  C0773774_MidTerm_MAD3115F2019
 //
-//  Created by Apple on 31/10/19.
-//  Copyright © 2019 Apple. All rights reserved.
+//  Created by Nitin Jaswal on 31/10/19.
+//  Copyright © 2019 Nitin Jaswal. All rights reserved.
 //
 
 import Foundation
