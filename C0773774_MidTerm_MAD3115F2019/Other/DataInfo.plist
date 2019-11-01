@@ -6,6 +6,24 @@
 	<array>
 		<dict>
 			<key>password</key>
+			<string>1234</string>
+			<key>username</key>
+			<string>toronto</string>
+		</dict>
+		<dict>
+			<key>username</key>
+			<string>1234</string>
+			<key>password</key>
+			<string>india</string>
+		</dict>
+		<dict>
+			<key>username</key>
+			<string>1234</string>
+			<key>password</key>
+			<string>ios</string>
+		</dict>
+		<dict>
+			<key>password</key>
 			<string>madt</string>
 			<key>username</key>
 			<string>lambton</string>
