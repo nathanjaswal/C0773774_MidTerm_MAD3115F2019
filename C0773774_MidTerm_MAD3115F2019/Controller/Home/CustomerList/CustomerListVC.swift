@@ -67,7 +67,11 @@ class CustomerListVC: UIViewController {
         //
         top_view.addShadow(view: top_view, color: UIColor.hexStringToUIColor(hex: "6D67FD").cgColor, offset: CGSize(width: 0, height: 3), opacity: 0.5, radius: 5)
         
-        
+    }
+    
+    func populateCustomer() {
+        let customers = DataSource.readJsonWith(name: "Customers")
+        Singelton.singObj.customerArr = customers
     }
     
 }
@@ -77,22 +81,16 @@ extension CustomerListVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return countryArr.count
+        return Singelton.singObj.customerArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = cTableView.dequeueReusableCell(withIdentifier: "CGCountryTableViewCell", for: indexPath ) as! CGCountryTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerListTVC", for: indexPath ) as! CustomerListTVC
         //
-        let country = countryArr[indexPath.row] as? String ?? ""
-        cell.title_lbl.text = country
+        let customer = Singelton.singObj.customerArr[indexPath.row]
         
-        //
-        if(selecCountry == country) {
-            cell.accessoryType = .checkmark
-        }else {
-            cell.accessoryType = .none
-        }
+        cell.name_lbl.text = (customer.firstName ?? "") + " " + (customer.lastName ?? "")
         
         return cell
     }
@@ -109,7 +107,7 @@ extension CustomerListVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //
-        tableView.deselectRowAtIndexPath(index, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
         
         //
         

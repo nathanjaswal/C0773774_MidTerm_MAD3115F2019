@@ -1,7 +1,13 @@
 {
-    "Employee": [{
+    
+    var id: Int?
+    var firstName: String?
+    var lastName: String?
+    var email: String?
+    
+    "Customers": [{
         "id": 1,
-        "name": "Ramanpreet Singh",
+        "name": "Ranjeet Singh",
         "age": 25,
         "schoolName": "Lambton College",
         "type": "Intern",
