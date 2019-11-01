@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b8f-dT-xWO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ck0-74-nje">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="435"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="411"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPD-un-YVL">
                                         <rect key="frame" x="20" y="60" width="374" height="42"/>
@@ -40,7 +41,6 @@
                                 <color key="backgroundColor" red="0.42745098039215684" green="0.40392156862745099" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="gPD-un-YVL" firstAttribute="leading" secondItem="Ck0-74-nje" secondAttribute="leading" constant="20" id="EX9-rZ-d10"/>
-                                    <constraint firstAttribute="height" constant="435" id="Nl4-i4-TQG"/>
                                     <constraint firstItem="UJ8-0V-4q9" firstAttribute="top" secondItem="gPD-un-YVL" secondAttribute="bottom" constant="8" id="Qam-24-BbW"/>
                                     <constraint firstAttribute="trailing" secondItem="UJ8-0V-4q9" secondAttribute="trailing" constant="20" id="Rg9-ec-UCe"/>
                                     <constraint firstAttribute="trailing" secondItem="gPD-un-YVL" secondAttribute="trailing" constant="20" id="bJC-DY-pbF"/>
@@ -61,7 +61,7 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjC-mS-3Wv">
                                                 <rect key="frame" x="298" y="0.0" width="45.5" height="50"/>
-                                                <state key="normal" image="info.circle" catalog="system"/>
+                                                <state key="normal" image="infoIcon"/>
                                                 <connections>
                                                     <action selector="userNHintBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b2u-Ka-9oZ"/>
                                                 </connections>
@@ -90,7 +90,7 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71a-cj-CY1">
                                                 <rect key="frame" x="298" y="0.0" width="42" height="50"/>
-                                                <state key="normal" image="info.circle" catalog="system"/>
+                                                <state key="normal" image="infoIcon"/>
                                                 <connections>
                                                     <action selector="passwdHintBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s3n-1l-D2d"/>
                                                 </connections>
@@ -186,6 +186,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Ck0-74-nje" firstAttribute="bottom" secondItem="Gk7-6g-W4w" secondAttribute="bottom" constant="-25" id="E5O-Nm-b1i"/>
                             <constraint firstItem="bsZ-GE-QtM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Egu-Jj-Nvv"/>
                             <constraint firstItem="qNF-VR-nah" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="IMh-oS-ner"/>
                             <constraint firstItem="Ck0-74-nje" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jdx-wJ-zbm"/>
@@ -234,7 +235,7 @@
     </scenes>
     <resources>
         <image name="checkIcon" width="17" height="17"/>
-        <image name="info.circle" catalog="system" width="64" height="60"/>
+        <image name="infoIcon" width="18" height="18"/>
         <image name="unCheckIcon" width="17" height="17"/>
     </resources>
 </document>
