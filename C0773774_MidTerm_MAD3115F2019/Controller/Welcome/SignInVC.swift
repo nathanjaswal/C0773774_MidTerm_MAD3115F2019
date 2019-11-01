@@ -71,9 +71,10 @@ class SignInVC: UIViewController {
              }
         }
         
-        //
+        // check validation
         if self.checkTextFields() {
-            //
+            
+            // check plist
             let boolChk = self.readDataInfoFromPlistFile().0
             let msg = self.readDataInfoFromPlistFile().1
             if boolChk {
@@ -88,22 +89,6 @@ class SignInVC: UIViewController {
     }
     
     // MARK: - Helper
-    
-    func checkTextFields() -> Bool {
-        
-        if userN_tf.text == "" {
-            self.showAlert(title: "Nitin Jaswal", message: "Username required.")
-            return false
-        }
-        if passwd_tf.text == "" {
-            self.showAlert(title: "Nitin Jaswal", message: "Password required.")
-            return false
-        }
-        
-        
-        return true
-    }
-    
     func initSetup(){
         //
         if let userName = UserDefaults.standard.string(forKey: "user_name"), let passwd = UserDefaults.standard.string(forKey: "password") {
@@ -128,6 +113,20 @@ class SignInVC: UIViewController {
         inConta_view.addShadow(view: inConta_view, color: UIColor.lightGray.cgColor, offset: CGSize(width: 0, height: 3), opacity: 0.4, radius: 5)
         signInBtn.addShadow(view: signInBtn, color: UIColor.hexStringToUIColor(hex: "6D67FD").cgColor, offset: CGSize(width: 0, height: 3), opacity: 0.8, radius: 5)
         
+    }
+    
+    func checkTextFields() -> Bool {
+        
+        if userN_tf.text == "" {
+            self.showAlert(title: "Nitin Jaswal", message: "Username required.")
+            return false
+        }
+        if passwd_tf.text == "" {
+            self.showAlert(title: "Nitin Jaswal", message: "Password required.")
+            return false
+        }
+        
+        return true
     }
     
     func readDataInfoFromPlistFile() -> (Bool, String)
