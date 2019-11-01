@@ -118,11 +118,11 @@ class SignInVC: UIViewController {
     func checkTextFields() -> Bool {
         
         if userN_tf.text == "" {
-            self.showAlert(title: "NJ", message: "Username required.")
+            self.showAlert(title: "NJ", message: "Username is required.")
             return false
         }
         if passwd_tf.text == "" {
-            self.showAlert(title: "NJ", message: "Password required.")
+            self.showAlert(title: "NJ", message: "Password is required.")
             return false
         }
         
