@@ -21,17 +21,22 @@ class CustomerListVC: UIViewController {
         //
         setUpUI()
         
+        //
+        initSetup()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        
         //
-        initSetup()
+        custmList_tv.reloadData()
+        
     }
     
     // MARK:- Action
-    @IBAction func moreBtnClicked(_ sender: Any) {
+    @IBAction func signoutBtnClicked(_ sender: Any) {
         //
         let alertController = UIAlertController(title: "NJ", message: "Do You want to Sign Out?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Yes", style: UIAlertAction.Style.destructive) {
