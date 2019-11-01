@@ -25,7 +25,6 @@ class SignInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         //
         setUpUI()
         
@@ -63,6 +62,7 @@ class SignInVC: UIViewController {
     @IBAction func signInBtnClicked(_ sender: Any) {
         //
         if remembBtn.isSelected == true {
+            
             UserDefaults.standard.set(userN_tf.text, forKey: "user_name")
             UserDefaults.standard.set(passwd_tf.text, forKey: "password")
         }else{
@@ -83,7 +83,6 @@ class SignInVC: UIViewController {
             }else{
                 self.showAlert(title: "Nitin Jaswal", message: msg)
             }
-            
         }
         
     }
@@ -92,15 +91,16 @@ class SignInVC: UIViewController {
     func initSetup(){
         //
         if let userName = UserDefaults.standard.string(forKey: "user_name"), let passwd = UserDefaults.standard.string(forKey: "password") {
+            //
+            remembBtn.isSelected = true
+            
             userN_tf.text = userName
             passwd_tf.text = passwd
         }else{
             // reset values
             userN_tf.text = ""
             passwd_tf.text = ""
-
         }
-        
     }
     
     func setUpUI() {
@@ -129,9 +129,9 @@ class SignInVC: UIViewController {
         return true
     }
     
-    func readDataInfoFromPlistFile() -> (Bool, String)
-       {
-           if let plist = Bundle.main.path(forResource: "DataInfo", ofType: "plist")
+    func readDataInfoFromPlistFile() -> (Bool, String) {
+        
+        if let plist = Bundle.main.path(forResource: "DataInfo", ofType: "plist")
            {
                if let dict = NSDictionary(contentsOfFile: plist)
                {
@@ -165,7 +165,8 @@ class SignInVC: UIViewController {
            }
         
            return (false, "Invalid information, check again.")
-       }
+           
+    }
     
 
 }
