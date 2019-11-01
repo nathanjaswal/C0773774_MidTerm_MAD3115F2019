@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="84" width="414" height="778"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="6xI-2K-Rji">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomerListTVC" rowHeight="70" id="6xI-2K-Rji" customClass="CustomerListTVC" customModule="C0773774_MidTerm_MAD3115F2019" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6xI-2K-Rji" id="sWL-Vq-2cy">
@@ -79,8 +79,16 @@
                                                 <constraint firstItem="zTZ-tY-uT1" firstAttribute="top" secondItem="sWL-Vq-2cy" secondAttribute="top" constant="10" id="xto-06-7Tp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contan_view" destination="sWL-Vq-2cy" id="cRO-aG-HiN"/>
+                                            <outlet property="name_lbl" destination="aHU-a5-Xwl" id="fPz-C1-Fxv"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Uga-dT-uwc" id="GJN-m9-SkZ"/>
+                                    <outlet property="delegate" destination="Uga-dT-uwc" id="DiK-u2-iRv"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YP2-Kl-jpx">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
