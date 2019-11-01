@@ -208,14 +208,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abc-5q-ZUm">
-                                <rect key="frame" x="40" y="278" width="334" height="320"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abc-5q-ZUm">
+                                <rect key="frame" x="20" y="278" width="374" height="320"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wo2-IX-BgU">
-                                        <rect key="frame" x="15" y="50" width="304" height="50"/>
+                                        <rect key="frame" x="15" y="50" width="344" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kgO-oz-fHo">
-                                                <rect key="frame" x="8" y="0.0" width="288" height="50"/>
+                                                <rect key="frame" x="8" y="0.0" width="328" height="50"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -230,10 +230,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrS-OZ-RLa">
-                                        <rect key="frame" x="15" y="115" width="304" height="50"/>
+                                        <rect key="frame" x="15" y="115" width="344" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AuN-66-Hpu">
-                                                <rect key="frame" x="8" y="0.0" width="288" height="50"/>
+                                                <rect key="frame" x="8" y="0.0" width="328" height="50"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -249,10 +249,10 @@
                                         <viewLayoutGuide key="safeArea" id="8hg-5X-uts"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgb-Kh-8QI">
-                                        <rect key="frame" x="15" y="180" width="304" height="50"/>
+                                        <rect key="frame" x="15" y="180" width="344" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JD8-1k-d1E">
-                                                <rect key="frame" x="8" y="0.0" width="288" height="50"/>
+                                                <rect key="frame" x="8" y="0.0" width="328" height="50"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
@@ -268,7 +268,7 @@
                                         <viewLayoutGuide key="safeArea" id="fem-ZC-sdn"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4c-yD-WhF">
-                                        <rect key="frame" x="174.5" y="245" width="144.5" height="50"/>
+                                        <rect key="frame" x="194.5" y="245" width="164.5" height="50"/>
                                         <color key="backgroundColor" red="0.42745098040000001" green="0.4039215686" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="cAW-XH-a5C"/>
@@ -277,12 +277,17 @@
                                         <state key="normal" title="Done">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="doneBtnClicked:" destination="TR7-xr-vRA" eventType="touchUpInside" id="E2M-F1-sdm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0k-wB-wq6">
-                                        <rect key="frame" x="15" y="245" width="144.5" height="50"/>
+                                        <rect key="frame" x="15" y="245" width="164.5" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Nd6-k5-blr"/>
@@ -335,8 +340,8 @@
                             <constraint firstItem="abc-5q-ZUm" firstAttribute="top" secondItem="O0o-lM-14p" secondAttribute="bottom" constant="-43" id="OMB-I0-kXZ"/>
                             <constraint firstItem="O0o-lM-14p" firstAttribute="centerX" secondItem="abc-5q-ZUm" secondAttribute="centerX" id="PH5-aH-YOZ"/>
                             <constraint firstItem="abc-5q-ZUm" firstAttribute="centerY" secondItem="Gkx-lS-fya" secondAttribute="centerY" constant="-15" id="W7W-vI-vr0"/>
-                            <constraint firstItem="Gkx-lS-fya" firstAttribute="trailing" secondItem="abc-5q-ZUm" secondAttribute="trailing" constant="40" id="z47-im-q9m"/>
-                            <constraint firstItem="abc-5q-ZUm" firstAttribute="leading" secondItem="Gkx-lS-fya" secondAttribute="leading" constant="40" id="zID-05-ZgL"/>
+                            <constraint firstItem="Gkx-lS-fya" firstAttribute="trailing" secondItem="abc-5q-ZUm" secondAttribute="trailing" constant="20" id="z47-im-q9m"/>
+                            <constraint firstItem="abc-5q-ZUm" firstAttribute="leading" secondItem="Gkx-lS-fya" secondAttribute="leading" constant="20" id="zID-05-ZgL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gkx-lS-fya"/>
                     </view>
@@ -348,7 +353,6 @@
                         <outlet property="fNameInn_view" destination="wo2-IX-BgU" id="2cX-dh-PwA"/>
                         <outlet property="fName_tf" destination="kgO-oz-fHo" id="ffR-dJ-UGM"/>
                         <outlet property="lNameInn_view" destination="qrS-OZ-RLa" id="Kye-kN-8x0"/>
-                        <outlet property="lNameTextField" destination="AuN-66-Hpu" id="eKu-T9-VB8"/>
                         <outlet property="lName_tf" destination="AuN-66-Hpu" id="l7P-cc-XUS"/>
                     </connections>
                 </viewController>

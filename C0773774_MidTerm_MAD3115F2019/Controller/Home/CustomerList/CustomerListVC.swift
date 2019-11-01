@@ -21,12 +21,13 @@ class CustomerListVC: UIViewController {
         //
         setUpUI()
         
-        //
-        initSetup()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        //
+        initSetup()
     }
     
     // MARK:- Action
