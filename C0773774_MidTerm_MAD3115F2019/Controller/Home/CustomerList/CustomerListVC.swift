@@ -74,6 +74,7 @@ class CustomerListVC: UIViewController {
     }
     
     func populateCustomer() {
+        // fetching data from json...
         let customers = DataSource.readJsonWith(name: "Customers")
         Singelton.singObj.customerArr = customers
         
@@ -98,6 +99,7 @@ extension CustomerListVC: UITableViewDataSource {
         let customer = Singelton.singObj.customerArr[indexPath.row]
         
         cell.name_lbl.text = (customer.firstName ?? "") + " " + (customer.lastName ?? "")
+        cell.email_lbl.text = customer.email ?? ""
         
         return cell
     }
@@ -109,7 +111,7 @@ extension CustomerListVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 70
+        return 100
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
