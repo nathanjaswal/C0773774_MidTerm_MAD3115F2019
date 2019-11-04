@@ -18,7 +18,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9c6-TR-QZ4">
                                 <rect key="frame" x="0.0" y="84" width="414" height="778"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomerListTVC" rowHeight="100" id="6xI-2K-Rji" customClass="CustomerListTVC" customModule="C0773774_MidTerm_MAD3115F2019" customModuleProvider="target">
@@ -113,6 +113,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="z3R-lV-iGT" firstAttribute="centerY" secondItem="sWL-Vq-2cy" secondAttribute="centerY" constant="8" id="3xY-yE-q0o"/>
                                                 <constraint firstAttribute="bottom" secondItem="zTZ-tY-uT1" secondAttribute="bottom" constant="2" id="Li5-gm-ExG"/>
@@ -121,6 +122,7 @@
                                                 <constraint firstItem="zTZ-tY-uT1" firstAttribute="top" secondItem="sWL-Vq-2cy" secondAttribute="top" constant="10" id="xto-06-7Tp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="contan_view" destination="zTZ-tY-uT1" id="m6p-E4-H2t"/>
                                             <outlet property="email_lbl" destination="f4N-F4-ghI" id="0Xj-5d-Uig"/>
@@ -179,7 +181,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YP2-Kl-jpx" firstAttribute="top" secondItem="tsP-0A-PYm" secondAttribute="top" id="7Ni-2c-CzW"/>
                             <constraint firstItem="YP2-Kl-jpx" firstAttribute="trailing" secondItem="olu-UH-LWb" secondAttribute="trailing" id="FXc-ny-1M0"/>
