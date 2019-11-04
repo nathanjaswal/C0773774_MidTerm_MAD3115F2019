@@ -30,5 +30,13 @@ class CustomerListTVC: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    // MARK: - Helper
+    func setDisplay(customer: CustomersM) {
+        //
+        name_lbl.text = (customer.firstName ?? "") + " " + (customer.lastName ?? "")
+        email_lbl.text = customer.email ?? ""
+    }
+    
 
 }

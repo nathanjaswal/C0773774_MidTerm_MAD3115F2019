@@ -102,10 +102,9 @@ extension CustomerListVC: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerListTVC", for: indexPath ) as! CustomerListTVC
         //
-        let customer = Singelton.singObj.customerArr[indexPath.row]
-        
-        cell.name_lbl.text = (customer.firstName ?? "") + " " + (customer.lastName ?? "")
-        cell.email_lbl.text = customer.email ?? ""
+        let customerData = Singelton.singObj.customerArr[indexPath.row]
+        //
+        cell.setDisplay(customer: customerData)
         
         return cell
     }
@@ -125,6 +124,8 @@ extension CustomerListVC: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         //
+        
+        self.navigateScreen(storyboard: "Detail", controller: "CustomerDetailVC")
         
         
     }
