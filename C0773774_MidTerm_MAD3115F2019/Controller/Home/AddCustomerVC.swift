@@ -47,7 +47,7 @@ class AddCustomerVC: UIViewController {
             let newId = self.emailAlready().1
             if boolChk {
                 //
-                let newCustomer = CustomersM(id: (newId + 1), firstName: fName_tf.text, lastName: lName_tf.text, email: email_tf.text)
+                let newCustomer = CustomersM(id: (newId + 1), firstName: fName_tf.text, lastName: lName_tf.text, email: email_tf.text)//, internet: nil, mobile: nil, hydro: nil)//
                 
                 Singelton.singObj.customerArr.append(CustomersVM(customer: newCustomer))
                 

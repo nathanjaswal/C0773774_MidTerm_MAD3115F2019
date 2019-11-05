@@ -8,10 +8,5 @@
 
 import Foundation
 
-struct InternetM: Codable {
-    
-    var name: String?
-    var data: Float?
-}
 
 

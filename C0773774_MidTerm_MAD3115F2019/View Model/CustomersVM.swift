@@ -6,6 +6,7 @@
 //  Copyright © 2019 Apple. All rights reserved.
 //
 
+import UIKit
 import Foundation
 
 class CustomersVM: NSObject {
@@ -16,8 +17,16 @@ class CustomersVM: NSObject {
     var lastName: String?
     var email: String?
 
-    var billDict: [BillM]?
-    //var customer:  [CustomersM]?
+    var bills: [BillM]?
+    
+
+    /// this is used to concat fisrt name and last name
+    var calFull: String {
+        get {
+              return (firstName ?? "") + " " + (lastName ?? "")
+           }
+    }
+    
     
     // MARK: - Life Cycle
     init(customer: CustomersM){
@@ -27,7 +36,47 @@ class CustomersVM: NSObject {
         self.lastName = customer.lastName
         self.email = customer.email
 
-        self.billDict = customer.billDict
+        self.bills = customer.bills
     }
     
+}
+
+// MARK:- UITableViewDataSource
+extension CustomerListVC: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return Singelton.singObj.customerArr.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerListTVC", for: indexPath ) as! CustomerListTVC
+        //
+        let customerData = Singelton.singObj.customerArr[indexPath.row]
+        //
+        cell.setDisplay(customer: customerData)
+        
+        return cell
+    }
+    
+}
+
+// MARK:- UITableViewDelegate
+extension CustomerListVC: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        //
+        self.navigateScreen(storyboard: "Detail", controller: "CustomerDetailVC")
+        
+        
+    }
 }

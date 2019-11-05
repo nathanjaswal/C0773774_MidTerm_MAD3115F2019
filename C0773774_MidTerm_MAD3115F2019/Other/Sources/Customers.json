@@ -4,13 +4,46 @@
                     "firstName": "Ranjeet",
                     "lastName": "Singh",
                     "email": "rs66@gmail.com",
-        
+                    "bills": [{
+                        "internet": {
+                            "id": "Inter001",
+                            "date": "2019-08-04",
+                            "type": "Internet",
+                            "amount": 386.99,
+                            "name": "Bell Inc.",
+                            "data": 100.50
+                        
+                         },
+                        "mobile": {
+                            "id": "Mob001",
+                            "date": "2019-09-04",
+                            "type": "Mobile",
+                            "amount": 100.88,
+                            "name": "Freedom",
+                            "plan": "Bronze",
+                            "phoneNo": "453-786-9903",
+                            "data": 20.00,
+                            "minutes": "120"
+                        
+                         },
+                        "hydro": {
+                             "id": "Hyd001",
+                             "date": "2019-08-13",
+                             "type": "Hydro",
+                             "amount": 10.78,
+                             "name": "Toronto Hydros",
+                             "data": 320.00
+                         
+                        }
+                        
+                    }]
                   },
                   {
                     "id": 2,
                     "firstName": "Nitin",
                     "lastName": "Jaswal",
                     "email": "nj@gmail.com",
+                    "bills": []
                   
                   },
                   {
@@ -18,6 +51,7 @@
                     "firstName": "Sam",
                     "lastName": "Amloh",
                     "email": "sam@gmail.com",
+                    "bills": []
                   
                   },
                   {
@@ -25,6 +59,7 @@
                     "firstName": "Karan",
                     "lastName": "Malhotra",
                     "email": "km@gmail.com",
+                    "bills": []
                   
                   },
                   {
@@ -32,6 +67,7 @@
                     "firstName": "Josh",
                     "lastName": "Lee",
                     "email": "jl@gmail.com",
+                    "bills": []
                             
                   },
                   {
@@ -39,6 +75,7 @@
                     "firstName": "Mindy",
                     "lastName": "Sain",
                     "email": "ms@gmail.com",
+                    "bills": []
                             
                   },
                   {
@@ -46,6 +83,7 @@
                     "firstName": "Jenny",
                     "lastName": "Kumari",
                     "email": "jk@gmail.com",
+                    "bills": []
                   
                   },
                   {
@@ -53,6 +91,7 @@
                     "firstName": "Doli",
                     "lastName": "Bindra",
                     "email": "db@gmail.com",
+                    "bills": []
                   
                   },
                   {
@@ -60,6 +99,7 @@
                     "firstName": "Ritesh",
                     "lastName": "Bhai",
                     "email": "rb@gmail.com",
+                    "bills": []
                             
                   },
                   {
@@ -67,6 +107,7 @@
                     "firstName": "Charu",
                     "lastName": "Gupta",
                     "email": "cg@gmail.com",
+                    "bills": []
                             
                   }]
 }

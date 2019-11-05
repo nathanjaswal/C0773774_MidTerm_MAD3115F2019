@@ -8,12 +8,4 @@
 
 import Foundation
 
-struct MobileM: Codable {
-    
-    var name: String?
-    var plan: String?
-    var phoneNo: String?
-    var data: Float?
-    var minutes: String?
-    
-}
+

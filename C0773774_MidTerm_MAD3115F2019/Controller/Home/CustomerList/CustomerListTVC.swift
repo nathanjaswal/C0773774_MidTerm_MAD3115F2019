@@ -34,7 +34,7 @@ class CustomerListTVC: UITableViewCell {
     // MARK: - Helper
     func setDisplay(customer: CustomersVM) {
         //
-        name_lbl.text = (customer.firstName ?? "") + " " + (customer.lastName ?? "")
+        name_lbl.text = customer.calFull
         email_lbl.text = customer.email ?? ""
     }
     

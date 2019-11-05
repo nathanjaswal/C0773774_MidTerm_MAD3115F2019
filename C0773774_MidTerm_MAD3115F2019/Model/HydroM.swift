@@ -9,12 +9,6 @@
 import Foundation
 
 
-struct HydroM: Codable {
-    
-    // MARK: - Properties
-    var name: String?
-    var units: Float?
 
-}
 
 

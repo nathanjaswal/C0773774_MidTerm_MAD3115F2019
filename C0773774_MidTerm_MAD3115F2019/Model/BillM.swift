@@ -8,16 +8,4 @@
 
 import Foundation
 
-struct BillM: Codable {
-    
-    // MARK: - properties
-    var id: Int?
-    var date: String?
-    var type: String?
-    var amount: Float?
-    var internet: InternetM
-    var mobile: MobileM
-    var hydro: HydroM
-    //var bill: [NSDictionary]//
-    
-}
+
