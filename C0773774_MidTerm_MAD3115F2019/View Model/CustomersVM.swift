@@ -18,7 +18,6 @@ class CustomersVM: NSObject {
     var email: String?
 
     var bills: [BillM]?
-    
 
     /// this is used to concat fisrt name and last name
     var calFull: String {
@@ -26,7 +25,6 @@ class CustomersVM: NSObject {
               return (firstName ?? "") + " " + (lastName ?? "")
            }
     }
-    
     
     // MARK: - Life Cycle
     init(customer: CustomersM){

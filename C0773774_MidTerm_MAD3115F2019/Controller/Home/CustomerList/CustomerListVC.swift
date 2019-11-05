@@ -24,11 +24,13 @@ class CustomerListVC: UIViewController {
         //
         initSetup()
         
+        // register to receive notification...
+        NotificationCenter.default.addObserver(self, selector: #selector(CustomerListVC.refresh), name:  Notification.Name("customerListRefresh"), object: nil)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         
         //
         custmList_tv.reloadData()
@@ -87,6 +89,11 @@ class CustomerListVC: UIViewController {
             Singelton.singObj.customerArr.append(CustomersVM(customer: cust_mer))
         }
         
+        //
+        custmList_tv.reloadData()
+    }
+    
+    @objc func refresh() {
         //
         custmList_tv.reloadData()
     }

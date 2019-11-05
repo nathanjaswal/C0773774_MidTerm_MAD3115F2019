@@ -47,9 +47,11 @@ class AddCustomerVC: UIViewController {
             let newId = self.emailAlready().1
             if boolChk {
                 //
-                let newCustomer = CustomersM(id: (newId + 1), firstName: fName_tf.text, lastName: lName_tf.text, email: email_tf.text)//, internet: nil, mobile: nil, hydro: nil)//
+                let newCustomer = CustomersM(id: (newId + 1), firstName: fName_tf.text, lastName: lName_tf.text, email: email_tf.text, bills: [])
                 
                 Singelton.singObj.customerArr.append(CustomersVM(customer: newCustomer))
+                
+                NotificationCenter.default.post(name: Notification.Name("customerListRefresh"), object: nil)
                 
                 self.dismiss(animated: true, completion: nil)
             }else{
