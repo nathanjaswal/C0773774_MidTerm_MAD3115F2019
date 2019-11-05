@@ -28,11 +28,11 @@
                          },
                         "hydro": {
                              "id": "Hyd001",
-                             "date": "2019-08-13",
+                             "date": "2019-08-03",
                              "type": "Hydro",
                              "amount": 10.78,
                              "name": "Toronto Hydros",
-                             "data": 320.00
+                             "units": 320.00
                          
                         }
                         
@@ -43,7 +43,39 @@
                     "firstName": "Nitin",
                     "lastName": "Jaswal",
                     "email": "nj@gmail.com",
-                    "bills": []
+                    "bills": [{
+                        "internet": {
+                            "id": "Inter002",
+                            "date": "2019-05-07",
+                            "type": "Internet",
+                            "amount": 186.33,
+                            "name": "Bell Inc.",
+                            "data": 300.50
+                        
+                         },
+                        "mobile": {
+                            "id": "Mob002",
+                            "date": "2019-06-04",
+                            "type": "Mobile",
+                            "amount": 190.88,
+                            "name": "Freedom",
+                            "plan": "Silver",
+                            "phoneNo": "454-186-0703",
+                            "data": 120.00,
+                            "minutes": "90"
+                        
+                         },
+                        "hydro": {
+                             "id": "Hyd002",
+                             "date": "2019-05-03",
+                             "type": "Hydro",
+                             "amount": 440.78,
+                             "name": "Toronto Hydros",
+                             "units": 520.00
+                         
+                        }
+                        
+                    }]
                   
                   },
                   {
@@ -51,7 +83,39 @@
                     "firstName": "Sam",
                     "lastName": "Amloh",
                     "email": "sam@gmail.com",
-                    "bills": []
+                    "bills": [{
+                        "internet": {
+                            "id": "Inter003",
+                            "date": "2019-09-02",
+                            "type": "Internet",
+                            "amount": 486.33,
+                            "name": "Bell Inc.",
+                            "data": 140.50
+                        
+                         },
+                        "mobile": {
+                            "id": "Mob003",
+                            "date": "2019-01-05",
+                            "type": "Mobile",
+                            "amount": 1260.88,
+                            "name": "Freedom",
+                            "plan": "Platinum",
+                            "phoneNo": "654-086-0203",
+                            "data": 520.00,
+                            "minutes": "390"
+                        
+                         },
+                        "hydro": {
+                             "id": "Hyd003",
+                             "date": "2019-08-03",
+                             "type": "Hydro",
+                             "amount": 340.78,
+                             "name": "Toronto Hydros",
+                             "units": 322.00
+                         
+                        }
+                        
+                    }]
                   
                   },
                   {
@@ -59,7 +123,39 @@
                     "firstName": "Karan",
                     "lastName": "Malhotra",
                     "email": "km@gmail.com",
-                    "bills": []
+                    "bills": [{
+                        "internet": {
+                            "id": "Inter004",
+                            "date": "2019-06-06",
+                            "type": "Internet",
+                            "amount": 336.33,
+                            "name": "Bell Inc.",
+                            "data": 990.90
+                        
+                         },
+                        "mobile": {
+                            "id": "Mob004",
+                            "date": "2019-02-02",
+                            "type": "Mobile",
+                            "amount": 110.88,
+                            "name": "Freedom",
+                            "plan": "Gold",
+                            "phoneNo": "334-036-5503",
+                            "data": 770.00,
+                            "minutes": "790"
+                        
+                         },
+                        "hydro": {
+                             "id": "Hyd004",
+                             "date": "2019-04-02",
+                             "type": "Hydro",
+                             "amount": 220.08,
+                             "name": "Toronto Hydros",
+                             "units": 1341.00
+                         
+                        }
+                        
+                    }]
                   
                   },
                   {
@@ -67,7 +163,39 @@
                     "firstName": "Josh",
                     "lastName": "Lee",
                     "email": "jl@gmail.com",
-                    "bills": []
+                    "bills": [{
+                        "internet": {
+                            "id": "Inter005",
+                            "date": "2019-03-06",
+                            "type": "Internet",
+                            "amount": 486.33,
+                            "name": "Bell Inc.",
+                            "data": 900.90
+                        
+                         },
+                        "mobile": {
+                            "id": "Mob005",
+                            "date": "2019-07-07",
+                            "type": "Mobile",
+                            "amount": 40.38,
+                            "name": "Fido",
+                            "plan": "Gold",
+                            "phoneNo": "114-036-1503",
+                            "data": 570.00,
+                            "minutes": "190"
+                        
+                         },
+                        "hydro": {
+                             "id": "Hyd005",
+                             "date": "2019-04-01",
+                             "type": "Hydro",
+                             "amount": 120.08,
+                             "name": "Inter City Hydros",
+                             "units": 230.60
+                         
+                        }
+                        
+                    }]
                             
                   },
                   {
