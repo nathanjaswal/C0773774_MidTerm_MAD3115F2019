@@ -10,11 +10,13 @@ import Foundation
 
 struct CustomersM: Codable {
     
-    // properties
+    // MARK: - Properties
     var id: Int?
     var firstName: String?
     var lastName: String?
     var email: String?
     
-    //var billDict: [String : AnyObject]?
+    var billDict: [BillM]?
+    
+
 }

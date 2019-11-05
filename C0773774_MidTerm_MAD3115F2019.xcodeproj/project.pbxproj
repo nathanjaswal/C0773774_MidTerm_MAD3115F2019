@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		180F21D52370C915004D231C /* CustomerDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F21D42370C915004D231C /* CustomerDetailTVC.swift */; };
+		180F21D72370D3F5004D231C /* BillM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F21D62370D3F5004D231C /* BillM.swift */; };
+		180F21D92370F98E004D231C /* InternetM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F21D82370F98E004D231C /* InternetM.swift */; };
+		180F21DB2370FA15004D231C /* MobileM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F21DA2370FA15004D231C /* MobileM.swift */; };
+		180F21DD2370FAA0004D231C /* HydroM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F21DC2370FAA0004D231C /* HydroM.swift */; };
 		181E7665236B1C8F00E0373B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E7664236B1C8F00E0373B /* AppDelegate.swift */; };
 		181E7667236B1C8F00E0373B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E7666236B1C8F00E0373B /* SceneDelegate.swift */; };
 		181E7669236B1C8F00E0373B /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E7668236B1C8F00E0373B /* SignInVC.swift */; };
@@ -61,6 +65,10 @@
 /* Begin PBXFileReference section */
 		114D9E4B1A8657B30E30BF14 /* Pods-C0773774_MidTerm_MAD3115F2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-C0773774_MidTerm_MAD3115F2019.debug.xcconfig"; path = "Target Support Files/Pods-C0773774_MidTerm_MAD3115F2019/Pods-C0773774_MidTerm_MAD3115F2019.debug.xcconfig"; sourceTree = "<group>"; };
 		180F21D42370C915004D231C /* CustomerDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailTVC.swift; sourceTree = "<group>"; };
+		180F21D62370D3F5004D231C /* BillM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillM.swift; sourceTree = "<group>"; };
+		180F21D82370F98E004D231C /* InternetM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetM.swift; sourceTree = "<group>"; };
+		180F21DA2370FA15004D231C /* MobileM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileM.swift; sourceTree = "<group>"; };
+		180F21DC2370FAA0004D231C /* HydroM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydroM.swift; sourceTree = "<group>"; };
 		181E7661236B1C8F00E0373B /* C0773774_MidTerm_MAD3115F2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C0773774_MidTerm_MAD3115F2019.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181E7664236B1C8F00E0373B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		181E7666236B1C8F00E0373B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,8 +210,12 @@
 			isa = PBXGroup;
 			children = (
 				18319307236CA34100C1BD62 /* Singelton.swift */,
-				1831930B236CA52000C1BD62 /* CustomersM.swift */,
 				1831930F236CA79C00C1BD62 /* BaseCustomers.swift */,
+				1831930B236CA52000C1BD62 /* CustomersM.swift */,
+				180F21D62370D3F5004D231C /* BillM.swift */,
+				180F21D82370F98E004D231C /* InternetM.swift */,
+				180F21DA2370FA15004D231C /* MobileM.swift */,
+				180F21DC2370FAA0004D231C /* HydroM.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -569,6 +581,8 @@
 				181E769D236B277800E0373B /* UIViewExtension.swift in Sources */,
 				183192FC236C9CF000C1BD62 /* CustomerListTVC.swift in Sources */,
 				18319304236CA08900C1BD62 /* UIFloatExtension.swift in Sources */,
+				180F21D72370D3F5004D231C /* BillM.swift in Sources */,
+				180F21DD2370FAA0004D231C /* HydroM.swift in Sources */,
 				18319308236CA34100C1BD62 /* Singelton.swift in Sources */,
 				181E76A3236B52E400E0373B /* Helper.swift in Sources */,
 				181E76AC236B5E7E00E0373B /* AddCustomerVC.swift in Sources */,
@@ -579,9 +593,11 @@
 				180F21D52370C915004D231C /* CustomerDetailTVC.swift in Sources */,
 				181E76AA236B5BA500E0373B /* CustomerListVC.swift in Sources */,
 				181E769F236B27A700E0373B /* UIColorExtension.swift in Sources */,
+				180F21D92370F98E004D231C /* InternetM.swift in Sources */,
 				1848A37D236FB440000CEEC3 /* CustomerDetailVC.swift in Sources */,
 				18319310236CA79C00C1BD62 /* BaseCustomers.swift in Sources */,
 				18319306236CA0DE00C1BD62 /* Protocol.swift in Sources */,
+				180F21DB2370FA15004D231C /* MobileM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

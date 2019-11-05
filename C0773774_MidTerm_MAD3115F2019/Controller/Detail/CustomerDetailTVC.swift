@@ -25,7 +25,8 @@ class CustomerDetailTVC: UITableViewCell {
     // MARK: -  Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        //
+        desc_view.addShadow(view: desc_view, color: UIColor.hexStringToUIColor(hex: "6D67FD").cgColor, offset: CGSize(width: 0, height: 3), opacity: 0.7, radius: 4)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

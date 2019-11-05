@@ -15,6 +15,7 @@ class CustomerDetailVC: UIViewController {
     // MARK: - Properties
     var seleInd = -1
     
+    @IBOutlet var detail_view: UIView!
     @IBOutlet var currDate_lbl: UILabel!
     @IBOutlet var design_lblL: UILabel!
     @IBOutlet var design_lblR: UILabel!
@@ -26,7 +27,9 @@ class CustomerDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //
+        setupUI()
+        
     }
     
     // MARK: - Action
@@ -39,6 +42,13 @@ class CustomerDetailVC: UIViewController {
     func setupUI() {
         design_lblL.roundCorners(corners: [.bottomRight, .topRight], radius: 8.0)
         design_lblR.roundCorners(corners: [.bottomLeft, .topLeft], radius: 8.0)
+        
+        //
+        detail_view.addShadow(view: detail_view, color: UIColor.hexStringToUIColor(hex: "6D67FD").cgColor, offset: CGSize(width: 0, height: 3), opacity: 0.7, radius: 8)
+        design_lblL.addShadow(view: design_lblL, color: UIColor.gray.cgColor, offset: CGSize(width: 0, height: 3), opacity: 0.7, radius: 8)
+        design_lblR.addShadow(view: design_lblR, color: UIColor.gray.cgColor, offset: CGSize(width: 0, height: 3), opacity: 0.7, radius: 8)
+        
+        
     }
 }
 
@@ -64,8 +74,10 @@ extension CustomerDetailVC: UITableViewDataSource {
         
         //
         cell.desc_view.isHidden = true
+        cell.upDown_img.image = UIImage(named: "downIcon")
         if(seleInd == indexPath.row){
             cell.desc_view.isHidden = false
+            cell.upDown_img.image = UIImage(named: "upIcon")
         }
         
         return cell
