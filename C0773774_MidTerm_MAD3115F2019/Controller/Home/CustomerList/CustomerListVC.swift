@@ -82,7 +82,10 @@ class CustomerListVC: UIViewController {
     func populateCustomer() {
         // fetching data from json...
         let customers = DataSource.readJsonWith(name: "Customers")
-        Singelton.singObj.customerArr = customers
+        
+        for cust_mer in customers {
+            Singelton.singObj.customerArr.append(CustomersVM(customer: cust_mer))
+        }
         
         //
         custmList_tv.reloadData()

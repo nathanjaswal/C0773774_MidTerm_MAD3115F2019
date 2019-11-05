@@ -12,5 +12,5 @@ class Singelton {
     
     static let singObj = Singelton()
     
-    var customerArr = [CustomersM]()
+    var customerArr = [CustomersVM]()
 }

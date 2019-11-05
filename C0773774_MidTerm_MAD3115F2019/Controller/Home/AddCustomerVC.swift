@@ -49,7 +49,7 @@ class AddCustomerVC: UIViewController {
                 //
                 let newCustomer = CustomersM(id: (newId + 1), firstName: fName_tf.text, lastName: lName_tf.text, email: email_tf.text)
                 
-                Singelton.singObj.customerArr.append(newCustomer)
+                Singelton.singObj.customerArr.append(CustomersVM(customer: newCustomer))
                 
                 self.dismiss(animated: true, completion: nil)
             }else{

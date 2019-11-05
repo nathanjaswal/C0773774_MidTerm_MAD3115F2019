@@ -18,5 +18,6 @@ struct BillM: Codable {
     var internet: InternetM
     var mobile: MobileM
     var hydro: HydroM
+    //var bill: [NSDictionary]//
     
 }
