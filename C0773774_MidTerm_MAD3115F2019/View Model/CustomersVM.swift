@@ -75,8 +75,12 @@ extension CustomerListVC: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         //
-        self.navigateScreen(storyboard: "Detail", controller: "CustomerDetailVC")
+        let storyboard = UIStoryboard(name: "Detail", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CustomerDetailVC") as! CustomerDetailVC
         
+        vc.custmDetail = Singelton.singObj.customerArr[indexPath.row]
+        
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
 }

@@ -294,6 +294,7 @@
                                             <outlet property="desc_view" destination="8z8-r5-kBs" id="Nr4-wx-rBo"/>
                                             <outlet property="descp_lbl" destination="laq-QD-BRf" id="Sec-Um-dhT"/>
                                             <outlet property="innerView" destination="tdI-b8-IBe" id="Pek-qw-74E"/>
+                                            <outlet property="type_img" destination="Dci-fO-f6O" id="kxS-35-VOJ"/>
                                             <outlet property="type_lbl" destination="cbk-fz-Isl" id="JmI-fY-cHe"/>
                                             <outlet property="upDown_img" destination="vaf-1r-z8M" id="trQ-Lj-Hz2"/>
                                         </connections>
@@ -334,10 +335,13 @@
                     </view>
                     <connections>
                         <outlet property="bill_tv" destination="623-Zj-mPm" id="cwB-fr-NYg"/>
-                        <outlet property="currDate_lbl" destination="Nz1-1q-1as" id="hcc-Yh-qFo"/>
+                        <outlet property="customerN_lbl" destination="NUV-fW-x5I" id="bgH-cx-R1V"/>
                         <outlet property="design_lblL" destination="lt6-QQ-n9c" id="Tte-Ff-M7V"/>
                         <outlet property="design_lblR" destination="txT-TE-Kfq" id="Fpy-b1-YLH"/>
                         <outlet property="detail_view" destination="DDY-lQ-E31" id="IVK-fH-z1f"/>
+                        <outlet property="email_lbl" destination="C3q-dn-Ghe" id="ptE-HJ-9lY"/>
+                        <outlet property="titleDate_lbl" destination="Nz1-1q-1as" id="ve0-bL-fzM"/>
+                        <outlet property="total_lbl" destination="6Nf-xp-YES" id="J1n-Ih-uI6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9M-Eg-3P2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

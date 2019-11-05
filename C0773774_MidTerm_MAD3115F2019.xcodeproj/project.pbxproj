@@ -27,8 +27,6 @@
 		183192F9236C887B00C1BD62 /* DataInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 183192F8236C887B00C1BD62 /* DataInfo.plist */; };
 		183192FC236C9CF000C1BD62 /* CustomerListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183192FB236C9CF000C1BD62 /* CustomerListTVC.swift */; };
 		183192FE236C9FA300C1BD62 /* Customers.json in Resources */ = {isa = PBXBuildFile; fileRef = 183192FD236C9FA300C1BD62 /* Customers.json */; };
-		18319300236CA03800C1BD62 /* Customer in Resources */ = {isa = PBXBuildFile; fileRef = 183192FF236CA03800C1BD62 /* Customer */; };
-		18319302236CA05100C1BD62 /* Bill in Resources */ = {isa = PBXBuildFile; fileRef = 18319301236CA05100C1BD62 /* Bill */; };
 		18319304236CA08900C1BD62 /* UIFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18319303236CA08900C1BD62 /* UIFloatExtension.swift */; };
 		18319306236CA0DE00C1BD62 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18319305236CA0DE00C1BD62 /* Protocol.swift */; };
 		18319308236CA34100C1BD62 /* Singelton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18319307236CA34100C1BD62 /* Singelton.swift */; };
@@ -37,6 +35,7 @@
 		18319310236CA79C00C1BD62 /* BaseCustomers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1831930F236CA79C00C1BD62 /* BaseCustomers.swift */; };
 		1848A37B236F8CD4000CEEC3 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1848A37A236F8CD4000CEEC3 /* Detail.storyboard */; };
 		1848A37D236FB440000CEEC3 /* CustomerDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848A37C236FB440000CEEC3 /* CustomerDetailVC.swift */; };
+		18A61F4823721FE900BF9283 /* CustomerDetailVCExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A61F4723721FE900BF9283 /* CustomerDetailVCExtend.swift */; };
 		18D8E79E2371F9330020B8E6 /* CustomersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D8E79D2371F9330020B8E6 /* CustomersVM.swift */; };
 		5E5191FDE32AA9EF9F990D79 /* Pods_C0773774_MidTerm_MAD3115F2019.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6402F679B7986F4DF08AC378 /* Pods_C0773774_MidTerm_MAD3115F2019.framework */; };
 		6E581D832939562D7E44C897 /* Pods_C0773774_MidTerm_MAD3115F2019_C0773774_MidTerm_MAD3115F2019UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99417BA3134CB8667E5999C /* Pods_C0773774_MidTerm_MAD3115F2019_C0773774_MidTerm_MAD3115F2019UITests.framework */; };
@@ -88,8 +87,6 @@
 		183192F8236C887B00C1BD62 /* DataInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DataInfo.plist; sourceTree = "<group>"; };
 		183192FB236C9CF000C1BD62 /* CustomerListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerListTVC.swift; sourceTree = "<group>"; };
 		183192FD236C9FA300C1BD62 /* Customers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Customers.json; sourceTree = "<group>"; };
-		183192FF236CA03800C1BD62 /* Customer */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Customer; sourceTree = "<group>"; };
-		18319301236CA05100C1BD62 /* Bill */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bill; sourceTree = "<group>"; };
 		18319303236CA08900C1BD62 /* UIFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFloatExtension.swift; sourceTree = "<group>"; };
 		18319305236CA0DE00C1BD62 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		18319307236CA34100C1BD62 /* Singelton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singelton.swift; sourceTree = "<group>"; };
@@ -98,6 +95,7 @@
 		1831930F236CA79C00C1BD62 /* BaseCustomers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomers.swift; sourceTree = "<group>"; };
 		1848A37A236F8CD4000CEEC3 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		1848A37C236FB440000CEEC3 /* CustomerDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailVC.swift; sourceTree = "<group>"; };
+		18A61F4723721FE900BF9283 /* CustomerDetailVCExtend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailVCExtend.swift; sourceTree = "<group>"; };
 		18D8E79D2371F9330020B8E6 /* CustomersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomersVM.swift; sourceTree = "<group>"; };
 		3A0C532BECE99D3B68DED1C0 /* Pods-C0773774_MidTerm_MAD3115F2019Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-C0773774_MidTerm_MAD3115F2019Tests.release.xcconfig"; path = "Target Support Files/Pods-C0773774_MidTerm_MAD3115F2019Tests/Pods-C0773774_MidTerm_MAD3115F2019Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4E3B377BDD417DE31FA3698C /* Pods-C0773774_MidTerm_MAD3115F2019Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-C0773774_MidTerm_MAD3115F2019Tests.debug.xcconfig"; path = "Target Support Files/Pods-C0773774_MidTerm_MAD3115F2019Tests/Pods-C0773774_MidTerm_MAD3115F2019Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -289,8 +287,6 @@
 		181E76A8236B5B8400E0373B /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				183192FF236CA03800C1BD62 /* Customer */,
-				18319301236CA05100C1BD62 /* Bill */,
 				183192FA236C9CCF00C1BD62 /* CustomerList */,
 				181E76AB236B5E7E00E0373B /* AddCustomerVC.swift */,
 			);
@@ -310,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				1848A37C236FB440000CEEC3 /* CustomerDetailVC.swift */,
+				18A61F4723721FE900BF9283 /* CustomerDetailVCExtend.swift */,
 				180F21D42370C915004D231C /* CustomerDetailTVC.swift */,
 			);
 			path = Detail;
@@ -449,8 +446,6 @@
 				181E766C236B1C8F00E0373B /* Welcome.storyboard in Resources */,
 				181E76A5236B586300E0373B /* Home.storyboard in Resources */,
 				183192F9236C887B00C1BD62 /* DataInfo.plist in Resources */,
-				18319300236CA03800C1BD62 /* Customer in Resources */,
-				18319302236CA05100C1BD62 /* Bill in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +585,7 @@
 				181E76AC236B5E7E00E0373B /* AddCustomerVC.swift in Sources */,
 				181E7669236B1C8F00E0373B /* SignInVC.swift in Sources */,
 				181E7665236B1C8F00E0373B /* AppDelegate.swift in Sources */,
+				18A61F4823721FE900BF9283 /* CustomerDetailVCExtend.swift in Sources */,
 				181E766F236B1C8F00E0373B /* C0773774_MidTerm_MAD3115F2019.xcdatamodeld in Sources */,
 				181E7667236B1C8F00E0373B /* SceneDelegate.swift in Sources */,
 				180F21D52370C915004D231C /* CustomerDetailTVC.swift in Sources */,

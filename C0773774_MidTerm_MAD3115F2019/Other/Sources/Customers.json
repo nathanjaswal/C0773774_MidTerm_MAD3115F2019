@@ -5,38 +5,35 @@
                     "lastName": "Singh",
                     "email": "rs66@gmail.com",
                     "bills": [{
-                        "internet": {
                             "id": "Inter001",
                             "date": "2019-08-04",
                             "type": "Internet",
                             "amount": 386.99,
-                            "name": "Bell Inc.",
-                            "data": 100.50
+                            "nameIn": "Bell Inc.",
+                            "dataIn": 100.50
                         
                          },
-                        "mobile": {
+                         {
                             "id": "Mob001",
                             "date": "2019-09-04",
                             "type": "Mobile",
                             "amount": 100.88,
-                            "name": "Freedom",
-                            "plan": "Bronze",
-                            "phoneNo": "453-786-9903",
-                            "data": 20.00,
-                            "minutes": "120"
+                            "nameMo": "Freedom",
+                            "planMo": "Bronze",
+                            "phoneNoMo": "453-786-9903",
+                            "dataMo": 20.00,
+                            "minutesMo": "120"
                         
                          },
-                        "hydro": {
+                         {
                              "id": "Hyd001",
                              "date": "2019-08-03",
                              "type": "Hydro",
                              "amount": 10.78,
-                             "name": "Toronto Hydros",
-                             "units": 320.00
+                             "nameHy": "Toronto Hydros",
+                             "unitsHy": 320.00
                          
-                        }
-                        
-                    }]
+                        }]
                   },
                   {
                     "id": 2,
@@ -44,38 +41,35 @@
                     "lastName": "Jaswal",
                     "email": "nj@gmail.com",
                     "bills": [{
-                        "internet": {
                             "id": "Inter002",
                             "date": "2019-05-07",
                             "type": "Internet",
                             "amount": 186.33,
-                            "name": "Bell Inc.",
-                            "data": 300.50
+                            "nameIn": "Bell Inc.",
+                            "dataIn": 300.50
                         
                          },
-                        "mobile": {
+                         {
                             "id": "Mob002",
                             "date": "2019-06-04",
                             "type": "Mobile",
                             "amount": 190.88,
-                            "name": "Freedom",
-                            "plan": "Silver",
-                            "phoneNo": "454-186-0703",
-                            "data": 120.00,
-                            "minutes": "90"
+                            "nameMo": "Freedom",
+                            "planMo": "Silver",
+                            "phoneNoMo": "454-186-0703",
+                            "dataMo": 120.00,
+                            "minutesMo": "90"
                         
                          },
-                        "hydro": {
+                         {
                              "id": "Hyd002",
                              "date": "2019-05-03",
                              "type": "Hydro",
                              "amount": 440.78,
-                             "name": "Toronto Hydros",
-                             "units": 520.00
+                             "nameHy": "Toronto Hydros",
+                             "unitsHy": 520.00
                          
-                        }
-                        
-                    }]
+                        }]
                   
                   },
                   {
@@ -84,38 +78,35 @@
                     "lastName": "Amloh",
                     "email": "sam@gmail.com",
                     "bills": [{
-                        "internet": {
                             "id": "Inter003",
                             "date": "2019-09-02",
                             "type": "Internet",
                             "amount": 486.33,
-                            "name": "Bell Inc.",
-                            "data": 140.50
+                            "nameIn": "Bell Inc.",
+                            "dataIn": 140.50
                         
                          },
-                        "mobile": {
+                         {
                             "id": "Mob003",
                             "date": "2019-01-05",
                             "type": "Mobile",
                             "amount": 1260.88,
-                            "name": "Freedom",
-                            "plan": "Platinum",
-                            "phoneNo": "654-086-0203",
-                            "data": 520.00,
-                            "minutes": "390"
+                            "nameMo": "Freedom",
+                            "planMo": "Platinum",
+                            "phoneNoMo": "654-086-0203",
+                            "dataMo": 520.00,
+                            "minutesMo": "390"
                         
                          },
-                        "hydro": {
+                         {
                              "id": "Hyd003",
                              "date": "2019-08-03",
                              "type": "Hydro",
                              "amount": 340.78,
-                             "name": "Toronto Hydros",
-                             "units": 322.00
+                             "nameHy": "Toronto Hydros",
+                             "unitsHy": 322.00
                          
-                        }
-                        
-                    }]
+                        }]
                   
                   },
                   {
@@ -124,38 +115,35 @@
                     "lastName": "Malhotra",
                     "email": "km@gmail.com",
                     "bills": [{
-                        "internet": {
                             "id": "Inter004",
                             "date": "2019-06-06",
                             "type": "Internet",
                             "amount": 336.33,
-                            "name": "Bell Inc.",
-                            "data": 990.90
+                            "nameIn": "Bell Inc.",
+                            "dataIn": 990.90
                         
                          },
-                        "mobile": {
+                         {
                             "id": "Mob004",
                             "date": "2019-02-02",
                             "type": "Mobile",
                             "amount": 110.88,
-                            "name": "Freedom",
-                            "plan": "Gold",
-                            "phoneNo": "334-036-5503",
-                            "data": 770.00,
-                            "minutes": "790"
+                            "nameMo": "Freedom",
+                            "planMo": "Gold",
+                            "phoneNoMo": "334-036-5503",
+                            "dataMo": 770.00,
+                            "minutesMo": "790"
                         
                          },
-                        "hydro": {
+                         {
                              "id": "Hyd004",
                              "date": "2019-04-02",
                              "type": "Hydro",
                              "amount": 220.08,
-                             "name": "Toronto Hydros",
-                             "units": 1341.00
+                             "nameHy": "Toronto Hydros",
+                             "unitsHy": 1341.00
                          
-                        }
-                        
-                    }]
+                        }]
                   
                   },
                   {
@@ -164,38 +152,33 @@
                     "lastName": "Lee",
                     "email": "jl@gmail.com",
                     "bills": [{
-                        "internet": {
                             "id": "Inter005",
                             "date": "2019-03-06",
                             "type": "Internet",
                             "amount": 486.33,
-                            "name": "Bell Inc.",
-                            "data": 900.90
+                            "nameIn": "Bell Inc.",
+                            "dataIn": 900.90
                         
-                         },
-                        "mobile": {
+                         },{
                             "id": "Mob005",
                             "date": "2019-07-07",
                             "type": "Mobile",
                             "amount": 40.38,
-                            "name": "Fido",
-                            "plan": "Gold",
-                            "phoneNo": "114-036-1503",
-                            "data": 570.00,
-                            "minutes": "190"
+                            "nameMo": "Fido",
+                            "planMo": "Gold",
+                            "phoneNoMo": "114-036-1503",
+                            "dataMo": 570.00,
+                            "minutesMo": "190"
                         
-                         },
-                        "hydro": {
+                         },{
                              "id": "Hyd005",
                              "date": "2019-04-01",
                              "type": "Hydro",
                              "amount": 120.08,
-                             "name": "Inter City Hydros",
-                             "units": 230.60
+                             "nameHy": "Inter City Hydros",
+                             "unitsHy": 230.60
                          
-                        }
-                        
-                    }]
+                        }]
                             
                   },
                   {

@@ -11,48 +11,24 @@ import Foundation
 struct BillM: Codable {
     
     // MARK: - Properties
-    var internet: InternetM?
-    var mobile: MobileM?
-    var hydro: HydroM?
-    
-    //var bill: [NSDictionary]//
-    
-}
-
-struct InternetM: Codable {
-    
-    // MARK: - Properties
     var id: String?
     var date: String?
     var type: String?
     var amount: Float?
-    var name: String?
-    var data: Float?
-}
-
-struct MobileM: Codable {
     
-    // MARK: - Properties
-    var id: String?
-    var date: String?
-    var type: String?
-    var amount: Float?
-    var name: String?
-    var plan: String?
-    var phoneNo: String?
-    var data: Float?
-    var minutes: String?
+    // Internet Properties
+    var nameIn: String?
+    var dataIn: Float?
     
-}
+    // Mobile Properties
+    var nameMo: String?
+    var planMo: String?
+    var phoneNoMo: String?
+    var dataMo: Float?
+    var minutesMo: String?
 
-struct HydroM: Codable {
+    // Hydro Properties
+    var nameHy: String?
+    var unitsHy: Float?
     
-    // MARK: - Properties
-    var id: String?
-    var date: String?
-    var type: String?
-    var amount: Float?
-    var name: String?
-    var units: Float?
-
 }
