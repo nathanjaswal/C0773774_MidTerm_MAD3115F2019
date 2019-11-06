@@ -1,5 +1,5 @@
 //
- // testing
+//
 //  AddNewBillVC.swift
 //  C0773774_MidTerm_MAD3115F2019
 //
@@ -8,6 +8,8 @@
 //
 
 import UIKit
+
+
 
 /// this is the class to create new bill
 class AddNewBillVC: UIViewController {
