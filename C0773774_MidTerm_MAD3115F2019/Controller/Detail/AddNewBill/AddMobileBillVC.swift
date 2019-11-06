@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AddMobileBillVCDelegate : class {
-    func moActionTrigger(str: String)
+    func moActionTrigger(str: String, field: String)
 }
 
 class AddMobileBillVC: UIViewController {
@@ -20,9 +20,20 @@ class AddMobileBillVC: UIViewController {
     @IBOutlet var providerView: UIView!
     @IBOutlet var provider_tf: UITextField!
     
-    @IBOutlet var unitsView: UIView!
-    @IBOutlet var units_tf: UITextField!
-
+    @IBOutlet var planView: UIView!
+    @IBOutlet var plan_tf: UITextField!
+    
+    @IBOutlet var phonenoView: UIView!
+    @IBOutlet var phoneNo_tf: UITextField!
+    
+    @IBOutlet var dataView: UIView!
+    @IBOutlet var data_tf: UITextField!
+    
+    
+    @IBOutlet var minutesView: UIView!
+    @IBOutlet var minutes_tf: UITextField!
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,7 +57,20 @@ extension AddMobileBillVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
 
         //
-        self.delegate?.moActionTrigger(str: textField.text!)
+        var txt_field = String()
+        if textField == provider_tf {
+            txt_field = "provider"
+        }else if textField == plan_tf {
+            txt_field = "plan"
+        }else if textField == phoneNo_tf {
+            txt_field = "phoneno"
+        }else if textField == data_tf {
+            txt_field = "data"
+        }
+        else if textField == minutes_tf {
+            txt_field = "minutes"
+        }
+        self.delegate?.moActionTrigger(str: textField.text!, field: txt_field)
     }
 
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AddInternetBillVCDelegate : class {
-    func intrActionTrigger(str: String)
+    func intrActionTrigger(str: String, field: String)
 }
 
 class AddInternetBillVC: UIViewController {
@@ -47,7 +47,13 @@ extension AddInternetBillVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
 
         //
-        self.delegate?.intrActionTrigger(str: textField.text!)
+        var txt_field = String()
+        if textField == provider_tf {
+            txt_field = "provider"
+        }else{
+            txt_field = "data"
+        }
+        self.delegate?.intrActionTrigger(str: textField.text!, field: txt_field)
     }
 
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AddHydroBillVCDelegate : class {
-    func intrActionTrigger(str: String)
+    func hydActionTrigger(str: String, field: String)
 }
 
 class AddHydroBillVC: UIViewController {
@@ -20,8 +20,8 @@ class AddHydroBillVC: UIViewController {
     @IBOutlet var providerView: UIView!
     @IBOutlet var provider_tf: UITextField!
             
-    @IBOutlet var dataView: UIView!
-    @IBOutlet var data_tf: UITextField!
+    @IBOutlet var unitsView: UIView!
+    @IBOutlet var units_tf: UITextField!
             
     // MARK:- Life Cycle
     override func viewDidLoad() {
@@ -47,7 +47,13 @@ extension AddHydroBillVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
 
         //
-        self.delegate?.intrActionTrigger(str: textField.text!)
+        var txt_field = String()
+        if textField == provider_tf {
+            txt_field = "provider"
+        }else {
+            txt_field = "units"
+        }
+        self.delegate?.hydActionTrigger(str: textField.text!, field: "")
     }
 
 }

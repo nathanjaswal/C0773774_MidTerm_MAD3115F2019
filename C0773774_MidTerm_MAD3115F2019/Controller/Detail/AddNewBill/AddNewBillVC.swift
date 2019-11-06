@@ -11,7 +11,25 @@ import UIKit
 /// this is the class to create new bill
 class AddNewBillVC: UIViewController {
 
-    // MARK:- Properties    
+    // MARK: - Properties
+    var customer_id = Int()
+    var bill_type: BillType?
+    
+    // Internet Properties
+    var bill_nameIn: String?
+    var bill_dataIn: String?
+    
+    // Mobile Properties
+    var bill_nameMo: String?
+    var bill_planMo: String?
+    var bill_phoneNoMo: String?
+    var bill_dataMo: String?
+    var bill_minutesMo: String?
+
+    // Hydro Properties
+    var bill_nameHy: String?
+    var bill_unitsHy: String?
+    
     lazy var datePicker: UIDatePicker = {
         let picker = UIDatePicker()
         picker.datePickerMode = .date
@@ -25,8 +43,8 @@ class AddNewBillVC: UIViewController {
     }()
     
     let kInternetChildH = 195.00
-    let kMobileChildH = 250.00
-    let kHydroChildH = 150.00
+    let kMobileChildH = 395.00
+    let kHydroChildH = 195.00
     let kInsuranceChildH = 250.00
     
     var addInternetVC = AddInternetBillVC()
@@ -49,7 +67,6 @@ class AddNewBillVC: UIViewController {
     @IBOutlet var type_tf: UITextField!
     @IBOutlet var amount_tf: UITextField!
     
-    
     // MARK:-  Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +77,6 @@ class AddNewBillVC: UIViewController {
         //
         initSetup()
     }
-    
 
     // MARK:- Action
     @IBAction func cancelBtnClicked(_ sender: Any) {
@@ -70,7 +86,31 @@ class AddNewBillVC: UIViewController {
     
     @IBAction func doneBtnClicked(_ sender: Any) {
         //
-        self.dismiss(animated: true, completion: nil)
+        if (bill_type != nil) {
+            if checkTextFields(type: bill_type!) {
+                let customers = Singelton.singObj.customerArr
+                for i in 0..<customers.count {
+                    let customer = customers[i]
+                    if customer.id == customer_id {
+      
+                        // creating bill...
+                        let bill = BillM(id: id_tf.text!, date: date_tf.text!, type: type_tf.text!, amount: Float(amount_tf.text!), nameIn: bill_nameIn ?? "", dataIn: Float(bill_dataIn ?? "0.00"), nameMo: bill_nameMo ?? "", planMo: bill_planMo ?? "", phoneNoMo: bill_phoneNoMo ?? "", dataMo: Float(bill_dataMo ?? "0.00"), minutesMo: bill_minutesMo ?? "", nameHy: bill_nameHy ?? "", unitsHy: Float(bill_unitsHy ?? "0.00"))
+                        var previousBills = customer.bills
+                        previousBills?.append(bill)
+                        
+                        // update customer
+                        let updateCustomer = CustomersM(id: customer.id, firstName: customer.firstName, lastName: customer.lastName, email: customer.email, bills: previousBills!)
+                        
+                        Singelton.singObj.customerArr.remove(at: i)
+                        Singelton.singObj.customerArr.insert(CustomersVM(customer: updateCustomer), at: i)
+                        //Singelton.singObj.customerArr.append()
+                    }
+                }
+            }
+        }
+       
+        
+        //self.dismiss(animated: true, completion: nil)
     }
     
     // MARK:- Helper
@@ -97,7 +137,76 @@ class AddNewBillVC: UIViewController {
         billTypePicker.dataSource = self
         type_tf.inputView = billTypePicker
         
+        //
         furtherDetailViewHeight.constant = 0.0
+    }
+    
+    func checkTextFields(type: BillType) -> Bool {
+    
+        if id_tf.text == "" {
+            self.showAlert(title: "NJ", message: "Bill Id is required.")
+            return false
+        }
+        if date_tf.text == "" {
+            self.showAlert(title: "NJ", message: "Bill date is required.")
+            return false
+        }
+        if type_tf.text == "" {
+            self.showAlert(title: "NJ", message: "Bill type is required.")
+            return false
+        }
+        if amount_tf.text == "" {
+            self.showAlert(title: "NJ", message: "Bill amount is required.")
+            return false
+        }
+        
+        switch type {
+            case BillType.internet:
+                if bill_nameIn == "" {
+                    self.showAlert(title: "NJ", message: "Provider Name is required.")
+                    return false
+                }
+                if bill_dataIn == "" {
+                    self.showAlert(title: "NJ", message: "Data Usage is required.")
+                    return false
+                }
+            case BillType.mobile:
+                if bill_nameMo == "" {
+                    self.showAlert(title: "NJ", message: "Provider Name is required.")
+                    return false
+                }
+                if bill_planMo == "" {
+                    self.showAlert(title: "NJ", message: "Plan selected is required.")
+                    return false
+                }
+                if bill_phoneNoMo == "" {
+                    self.showAlert(title: "NJ", message: "Phone Number is required.")
+                    return false
+                }
+                if bill_dataMo == "" {
+                    self.showAlert(title: "NJ", message: "Dtae is required.")
+                    return false
+                }
+                if bill_minutesMo == "" {
+                    self.showAlert(title: "NJ", message: "Minutes Usage is required.")
+                    return false
+                }
+            case BillType.hydro:
+                if bill_nameHy == "" {
+                    self.showAlert(title: "NJ", message: "Provider Name is required.")
+                    return false
+                }
+                if bill_unitsHy == "" {
+                    self.showAlert(title: "NJ", message: "Units is required.")
+                    return false
+                }
+            case BillType.insurance:
+                break
+        }
+        
+       
+        
+        return true
     }
     
     func setupFurtherDetailView(type: BillType) {
@@ -126,8 +235,44 @@ class AddNewBillVC: UIViewController {
         case BillType.mobile:
             furtherDetailViewHeight.constant = CGFloat(kMobileChildH)
             
+            //
+            self.view.layoutIfNeeded()
+            
+            //
+             addMobileVC.willMove(toParent: nil)
+             addMobileVC.view.removeFromSuperview()
+             addMobileVC.removeFromParent()
+
+             //
+             addMobileVC = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "AddMobileBillVC") as! AddMobileBillVC
+            
+             addMobileVC.delegate = self
+             addMobileVC.view.frame = CGRect(x: 15, y: 15, width: Int(self.view.frame.size.width - 30.00), height: Int(kMobileChildH))
+             
+             self.addChild(addMobileVC)
+             self.furtherDetailView.addSubview(addMobileVC.view)
+             addMobileVC.didMove(toParent: self)
+            
         case BillType.hydro:
             furtherDetailViewHeight.constant = CGFloat(kHydroChildH)
+                        
+            //
+            self.view.layoutIfNeeded()
+            
+            //
+             addHydroVC.willMove(toParent: nil)
+             addHydroVC.view.removeFromSuperview()
+             addHydroVC.removeFromParent()
+
+             //
+             addHydroVC = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "AddHydroBillVC") as! AddHydroBillVC
+            
+             addHydroVC.delegate = self
+             addHydroVC.view.frame = CGRect(x: 15, y: 15, width: Int(self.view.frame.size.width - 30.00), height: Int(kHydroChildH))
+             
+             self.addChild(addHydroVC)
+             self.furtherDetailView.addSubview(addHydroVC.view)
+             addHydroVC.didMove(toParent: self)
             
         case BillType.insurance:
             furtherDetailViewHeight.constant = CGFloat(kInsuranceChildH)
@@ -152,9 +297,7 @@ extension AddNewBillVC: UITextFieldDelegate {
     }
 }
 
-/*
- Manage Bill type picker
- */
+// MARK: - UIPickerViewDelegate && UIPickerViewDataSource
 typealias BillTypePicker = AddNewBillVC
 extension BillTypePicker: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -171,6 +314,7 @@ extension BillTypePicker: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        bill_type = BillType.allCases[row]
         type_tf.text = BillType.allCases[row].rawValue
         
         //
@@ -182,7 +326,60 @@ extension BillTypePicker: UIPickerViewDelegate, UIPickerViewDataSource {
 // MARK: - OfflineDelegate
 extension AddNewBillVC: AddInternetBillVCDelegate {
     
-    func intrActionTrigger(str: String) {
-        print(str)
+    func intrActionTrigger(str: String, field: String) {
+        switch field {
+        case "provider":
+            bill_nameIn = str
+            break
+        case "data":
+            bill_dataIn = str
+            break
+        default:
+            break
+        }
     }
 }
+
+// MARK: - OfflineDelegate
+extension AddNewBillVC: AddMobileBillVCDelegate {
+    
+    func moActionTrigger(str: String, field: String) {
+        switch field {
+        case "provider":
+            bill_nameMo = str
+            break
+        case "plan":
+            bill_planMo = str
+            break
+        case "phoneno":
+            bill_phoneNoMo = str
+            break
+        case "data":
+            bill_dataMo = str
+            break
+        case "minutes":
+            bill_minutesMo = str
+            break
+        default:
+            break
+        }
+    }
+}
+
+// MARK: - OfflineDelegate
+extension AddNewBillVC: AddHydroBillVCDelegate {
+    
+    func hydActionTrigger(str: String, field: String) {
+        switch field {
+        case "provider":
+            bill_nameHy = str
+            break
+        case "units":
+            bill_unitsHy = str
+            break
+        default:
+            break
+        }
+    }
+}
+
