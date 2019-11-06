@@ -4,7 +4,7 @@
 //
 //  Created by Nitin on 06/11/19.
 //  Copyright © 2019 Apple. All rights reserved.
-//
+// 
 
 import UIKit
 
@@ -208,7 +208,7 @@ class AddNewBillVC: UIViewController {
                     return false
                 }
                 if bill_phoneNoMo!.count > 10 {
-                    self.showAlert(title: "NJ", message: "Phone Number length should be less than 10 character")
+                    self.showAlert(title: "NJ", message: "Phone Number length should be less than 10 character.")
                     return false
                 }
                 if bill_dataMo == "" {
