@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180E724923732ACF004D6F6B /* AddNewBillVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E724823732ACF004D6F6B /* AddNewBillVC.swift */; };
 		180F21D52370C915004D231C /* CustomerDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F21D42370C915004D231C /* CustomerDetailTVC.swift */; };
 		180F21D72370D3F5004D231C /* BillM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F21D62370D3F5004D231C /* BillM.swift */; };
 		181E7665236B1C8F00E0373B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E7664236B1C8F00E0373B /* AppDelegate.swift */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		114D9E4B1A8657B30E30BF14 /* Pods-C0773774_MidTerm_MAD3115F2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-C0773774_MidTerm_MAD3115F2019.debug.xcconfig"; path = "Target Support Files/Pods-C0773774_MidTerm_MAD3115F2019/Pods-C0773774_MidTerm_MAD3115F2019.debug.xcconfig"; sourceTree = "<group>"; };
+		180E724823732ACF004D6F6B /* AddNewBillVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBillVC.swift; sourceTree = "<group>"; };
 		180F21D42370C915004D231C /* CustomerDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailTVC.swift; sourceTree = "<group>"; };
 		180F21D62370D3F5004D231C /* BillM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillM.swift; sourceTree = "<group>"; };
 		181E7661236B1C8F00E0373B /* C0773774_MidTerm_MAD3115F2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C0773774_MidTerm_MAD3115F2019.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +148,16 @@
 				3A0C532BECE99D3B68DED1C0 /* Pods-C0773774_MidTerm_MAD3115F2019Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		180E724523732A82004D6F6B /* CustomerDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1848A37C236FB440000CEEC3 /* CustomerDetailVC.swift */,
+				18A61F4723721FE900BF9283 /* CustomerDetailVCExtend.swift */,
+				180F21D42370C915004D231C /* CustomerDetailTVC.swift */,
+			);
+			path = CustomerDetail;
 			sourceTree = "<group>";
 		};
 		181E7658236B1C8F00E0373B = {
@@ -305,9 +317,8 @@
 		1848A37E236FB445000CEEC3 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				1848A37C236FB440000CEEC3 /* CustomerDetailVC.swift */,
-				18A61F4723721FE900BF9283 /* CustomerDetailVCExtend.swift */,
-				180F21D42370C915004D231C /* CustomerDetailTVC.swift */,
+				180E724523732A82004D6F6B /* CustomerDetail */,
+				180E724823732ACF004D6F6B /* AddNewBillVC.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -575,6 +586,7 @@
 			files = (
 				1831930C236CA52000C1BD62 /* CustomersM.swift in Sources */,
 				1831930A236CA44800C1BD62 /* DataSource.swift in Sources */,
+				180E724923732ACF004D6F6B /* AddNewBillVC.swift in Sources */,
 				181E769D236B277800E0373B /* UIViewExtension.swift in Sources */,
 				183192FC236C9CF000C1BD62 /* CustomerListTVC.swift in Sources */,
 				18D8E79E2371F9330020B8E6 /* CustomersVM.swift in Sources */,
