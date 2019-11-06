@@ -207,6 +207,10 @@ class AddNewBillVC: UIViewController {
                     self.showAlert(title: "NJ", message: "Phone Number is required.")
                     return false
                 }
+                if bill_phoneNoMo!.count > 10 {
+                    self.showAlert(title: "NJ", message: "Phone Number length should be less than 10 character")
+                    return false
+                }
                 if bill_dataMo == "" {
                     self.showAlert(title: "NJ", message: "Dtae is required.")
                     return false
