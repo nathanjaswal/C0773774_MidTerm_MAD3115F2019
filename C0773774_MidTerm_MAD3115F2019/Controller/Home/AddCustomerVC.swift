@@ -53,7 +53,9 @@ class AddCustomerVC: UIViewController {
                 
                 NotificationCenter.default.post(name: Notification.Name("customerListRefresh"), object: nil)
                 
-                self.dismiss(animated: true, completion: nil)
+                //
+                doneCompleted()
+               
             }else{
                 self.showAlert(title: "NJ", message: "E-mail address already used")
             }
@@ -61,6 +63,24 @@ class AddCustomerVC: UIViewController {
     }
 
     // MARK: - Helper
+    func doneCompleted() {
+        //
+        let alertController = UIAlertController(title: "NJ", message: "Customer Created Successfully.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.destructive) {
+            UIAlertAction in
+            
+            //
+             self.dismiss(animated: true, completion: nil)
+            
+        }
+        
+        // Add the actions
+        alertController.addAction(okAction)
+        
+        // Present the controller
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     func setUpUI() {
         //
         fNameInn_view.addBorder(view: fNameInn_view, radius: 7.0, width: 1, color: UIColor.lightGray.cgColor)
