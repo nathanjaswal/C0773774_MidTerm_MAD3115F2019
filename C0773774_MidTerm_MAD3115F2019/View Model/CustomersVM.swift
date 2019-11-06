@@ -76,7 +76,7 @@ extension CustomerListVC: UITableViewDelegate {
         let storyboard = UIStoryboard(name: "Detail", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "CustomerDetailVC") as! CustomerDetailVC
         
-        vc.custmDetail = Singelton.singObj.customerArr[indexPath.row]
+        vc.custDetailArrInd = indexPath.row
         
         self.navigationController?.pushViewController(vc, animated: true)
         

@@ -9,7 +9,7 @@
 import Foundation
 
 enum BillType: String, CaseIterable {
-    case internet = "Internet", mobile = "Mobile", hydro = "Hydro", insurance = "Insurance"
+    case internet = "Internet", mobile = "Mobile", hydro = "Hydro"//, insurance = "Insurance"
 }
 
 struct BillM: Codable {

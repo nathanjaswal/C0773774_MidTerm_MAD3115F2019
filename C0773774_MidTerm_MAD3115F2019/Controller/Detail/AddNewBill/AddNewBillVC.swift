@@ -104,6 +104,11 @@ class AddNewBillVC: UIViewController {
                         Singelton.singObj.customerArr.remove(at: i)
                         Singelton.singObj.customerArr.insert(CustomersVM(customer: updateCustomer), at: i)
                         //Singelton.singObj.customerArr.append()
+                        
+                         NotificationCenter.default.post(name: Notification.Name("customerDetailVCRefresh"), object: nil)
+                        
+                        //
+                        doneCompleted()
                     }
                 }
             }
@@ -114,6 +119,25 @@ class AddNewBillVC: UIViewController {
     }
     
     // MARK:- Helper
+    
+    func doneCompleted() {
+        //
+        let alertController = UIAlertController(title: "NJ", message: "Bill Successfully Created.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.destructive) {
+            UIAlertAction in
+            
+            //
+             self.dismiss(animated: true, completion: nil)
+            
+        }
+        
+        // Add the actions
+        alertController.addAction(okAction)
+        
+        // Present the controller
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     func setUpUI() {
         //
         cancelBtn.addBorder(view: cancelBtn, radius: 8.0, width: 1, color: UIColor.hexStringToUIColor(hex: "6D67FD").cgColor)
@@ -200,8 +224,8 @@ class AddNewBillVC: UIViewController {
                     self.showAlert(title: "NJ", message: "Units is required.")
                     return false
                 }
-            case BillType.insurance:
-                break
+//            case BillType.insurance:
+//                break
         }
         
        
@@ -274,8 +298,8 @@ class AddNewBillVC: UIViewController {
              self.furtherDetailView.addSubview(addHydroVC.view)
              addHydroVC.didMove(toParent: self)
             
-        case BillType.insurance:
-            furtherDetailViewHeight.constant = CGFloat(kInsuranceChildH)
+//        case BillType.insurance:
+//            furtherDetailViewHeight.constant = CGFloat(kInsuranceChildH)
         
         }
     }
