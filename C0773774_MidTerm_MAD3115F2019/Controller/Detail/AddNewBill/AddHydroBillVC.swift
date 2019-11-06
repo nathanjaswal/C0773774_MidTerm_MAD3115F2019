@@ -8,23 +8,47 @@
 
 import UIKit
 
+protocol AddHydroBillVCDelegate : class {
+    func intrActionTrigger(str: String)
+}
+
 class AddHydroBillVC: UIViewController {
 
+    // MARK: - Properties
+    weak var delegate: AddHydroBillVCDelegate?
+            
+    @IBOutlet var providerView: UIView!
+    @IBOutlet var provider_tf: UITextField!
+            
+    @IBOutlet var dataView: UIView!
+    @IBOutlet var data_tf: UITextField!
+            
+    // MARK:- Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //
+        intialSetup()
     }
-    
+            
+    // MARK: - Helper
+    func intialSetup() {
+                //
+                
+        //        providerView.addBorder(view: providerView, radius: 7.0, width: 1, color: UIColor.lightGray.cgColor)
+        //        dataView.addBorder(view: dataView, radius: 7.0, width: 1, color: UIColor.lightGray.cgColor)
+     }
+           
+}
 
-    /*
-    // MARK: - Navigation
+// MARK: - UITextFieldDelegates
+extension AddHydroBillVC: UITextFieldDelegate {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func textFieldDidEndEditing(_ textField: UITextField) {
+
+        //
+        self.delegate?.intrActionTrigger(str: textField.text!)
     }
-    */
 
 }
+

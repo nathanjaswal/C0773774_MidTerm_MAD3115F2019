@@ -34,6 +34,9 @@ class AddInternetBillVC: UIViewController {
     // MARK: - Helper
     func intialSetup() {
         //
+        
+//        providerView.addBorder(view: providerView, radius: 7.0, width: 1, color: UIColor.lightGray.cgColor)
+//        dataView.addBorder(view: dataView, radius: 7.0, width: 1, color: UIColor.lightGray.cgColor)
     }
    
 }
@@ -42,11 +45,7 @@ class AddInternetBillVC: UIViewController {
 extension AddInternetBillVC: UITextFieldDelegate {
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        //
-        self.willMove(toParent: nil)
-        self.view.removeFromSuperview()
-        self.removeFromParent()
-        
+
         //
         self.delegate?.intrActionTrigger(str: textField.text!)
     }

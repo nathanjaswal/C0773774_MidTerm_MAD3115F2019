@@ -24,7 +24,7 @@ class AddNewBillVC: UIViewController {
         return picker
     }()
     
-    let kInternetChildH = 150.00
+    let kInternetChildH = 195.00
     let kMobileChildH = 250.00
     let kHydroChildH = 150.00
     let kInsuranceChildH = 250.00
@@ -117,7 +117,7 @@ class AddNewBillVC: UIViewController {
              addInternetVC = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "AddInternetBillVC") as! AddInternetBillVC
             
              addInternetVC.delegate = self
-             addInternetVC.view.frame = CGRect(x: 15, y: 15, width: Int(self.view.frame.size.width - 30.00), height: Int(kInternetChildH - 60.00))
+             addInternetVC.view.frame = CGRect(x: 15, y: 15, width: Int(self.view.frame.size.width - 30.00), height: Int(kInternetChildH))
              
              self.addChild(addInternetVC)
              self.furtherDetailView.addSubview(addInternetVC.view)
@@ -166,6 +166,7 @@ extension BillTypePicker: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
         return BillType.allCases[row].rawValue
     }
     
@@ -182,6 +183,6 @@ extension BillTypePicker: UIPickerViewDelegate, UIPickerViewDataSource {
 extension AddNewBillVC: AddInternetBillVCDelegate {
     
     func intrActionTrigger(str: String) {
-        
+        print(str)
     }
 }
